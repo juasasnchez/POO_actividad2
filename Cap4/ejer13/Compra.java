@@ -1,15 +1,12 @@
 package ejer13;
 
-
 public class Compra {
-    double valor_total;
+    double valor_total, descuento, valor_a_pagar;
     
     public Compra(double valor_total){
         this.valor_total= valor_total;
     }
-    
-    public double CalcularDescuento(String color){
-        double descuento;
+    public void CalcularDescuento(String color){
         descuento=0;
         
         if (color.equals("BLANCA")){
@@ -31,14 +28,9 @@ public class Compra {
         else{
             descuento=0;
         }
-        return descuento;
     }
-    
-    public double CalcularValorAPagar(double descuento){
-        double valor_a_pagar=0;
+    public void CalcularValorAPagar(double descuento){
+        valor_a_pagar=0;
         valor_a_pagar=valor_total-valor_total*descuento;
-        return valor_a_pagar;
     }
-    
-    
 }
