@@ -11,11 +11,10 @@ public class Ejer13 {
         Compra compra= new Compra(e.nextDouble());
         System.out.println("Ingrese el color de la bola");
         Bola bola= new Bola(e.next().toUpperCase());
-        descuento=compra.CalcularDescuento(bola.color);
-        valor_a_pagar=compra.CalcularValorAPagar(descuento);
-        System.out.println("Descuento:"+descuento*100+"%");
-        System.out.println("Valor total a pagar:"+valor_a_pagar);
+        compra.CalcularDescuento(bola.color);
+        compra.CalcularValorAPagar(compra.descuento);
+        System.out.println("Descuento:"+compra.descuento*100+"%");
+        System.out.println("Valor total a pagar:"+compra.valor_a_pagar);
         
-    }
-    
+    } 
 }
